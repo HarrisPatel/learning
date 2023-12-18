@@ -1,0 +1,64 @@
+H2 {
+    font-weight: bold;
+    line-height: 70px;
+}
+
+p {
+    color: gray;
+    line-height: 25px;
+    font-size: 15px;
+}
+.des-show{
+    display: block;
+}
+.des-none{
+    display: none;
+}
+
+/* --------------------------------Tablet---------------------------------- */
+
+@media only screen and (min-width: 760px) and (max-width: 1024px){
+    .t-show{
+        display: block;
+    }
+    .t-none{
+        display: none;
+    }
+}
+@media only screen and (min-width: 930px) and (max-width: 1024px) and (orientation:landscape){
+    .tl-show{
+        display: block;
+    }
+    .tl-none{
+        display: none;
+    }
+}
+
+/* --------------------------------Mobile---------------------------------- */
+
+@media only screen and (max-width: 720px){
+    .m-show{
+        display: block;
+    }
+    .m-none{
+        display: none;
+    }
+    H2 {
+        font-weight: bold;
+        line-height: 40px;
+    }
+    
+    p {
+        color: gray;
+        line-height: 25px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 930px) and (orientation:landscape){
+    .ml-show{
+        display: block;
+    }
+    .ml-none{
+        display: none;
+    }
+}

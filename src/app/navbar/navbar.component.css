@@ -1,0 +1,152 @@
+header {
+    box-shadow: -1px -15px 46px rgb(156, 148, 148);
+}
+
+.profile .btn {
+    background-color: white;
+    color: #5d5c5c;
+    border: none;
+}
+
+.language .btn {
+    background-color: white;
+    color: #5d5c5c;
+    border: none;
+}
+
+.heart svg {
+    margin-top: 10px;
+    color: #e21a70;
+    cursor: pointer;
+}
+
+.cart svg {
+    margin-top: 9px;
+    color: #e21a70;
+    cursor: pointer;
+}
+
+.location {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+    width: 15%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.options {
+    width: 45%;
+    margin-top: 20px;
+}
+
+.t-pink {
+    color: #e21a70;
+}
+
+.t-black {
+    color: #5d5c5c;
+}
+
+.div-pink {
+    background-color: #e21a70;
+    padding-top: 4px;
+    border-radius: 50px;
+}
+
+.div-black {
+    background-color: #ffffff;
+}
+
+#dash {
+    margin-top: 10px;
+    margin-bottom: -17px;
+}
+
+.bold svg {
+    margin-bottom: 9px;
+}
+
+.des-show {
+    display: block;
+}
+
+.des-none {
+    display: none;
+}
+
+/* --------------------------------Tablet---------------------------------- */
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+    .t-show {
+        display: block;
+    }
+
+    .t-none {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1024px) and (orientation:landscape) {
+    .tl-show {
+        display: block;
+    }
+
+    .tl-none {
+        display: none;
+    }
+}
+
+/* --------------------------------Mobile---------------------------------- */
+
+@media only screen and (max-width: 720px) {
+    .m-show {
+        display: block;
+    }
+
+    .m-none {
+        display: none;
+    }
+
+    .optionsbar {
+        display: flex;
+        overflow-x: scroll;
+        height: 50px;
+    }
+
+    .bold {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0px 13px;
+        cursor: pointer;
+    }
+    .options{
+        width: 100%;
+    }
+    .bold span{
+        width: 60px;
+    }
+    .heart{
+        margin-left: 150px;
+    }
+    .cart{
+        margin-left: 10px;
+    }
+    .location{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 930px) and (orientation:landscape) {
+    .ml-show {
+        display: block;
+    }
+
+    .ml-none {
+        display: none;
+    }
+}

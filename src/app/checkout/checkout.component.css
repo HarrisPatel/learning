@@ -1,0 +1,140 @@
+
+:host {
+    display:block;
+    background-color: #f2f1f2;
+}
+.container{
+    max-width: 1180px;
+    padding-top: 150px;
+    
+}
+.address{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.letter-location{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.letter-location p{
+    margin-bottom: 0;
+    line-height: 27px;
+    font-size: 15px;
+    color: rgb(90, 89, 89);
+}
+.location{
+    margin-top: 13px;
+}
+.border-bottom{
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+.form-check-input{
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-color: #4a4a4a;
+}
+.form-check-input:checked {
+    background-color: #e21a70;
+    border-color: #e21a70;
+}
+.contact-less span{
+    line-height: 30px;
+}
+.contact-less{
+    margin-top: 10px;
+}
+.form-check{
+    margin-left: 5px;
+}
+.your-order{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.your-order-bottom{
+    font-size: 14px;
+    color: gray;
+    line-height: 30px;
+}
+.personal{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 22px;
+}
+.form-floating{
+    margin-top: 15px;
+}
+.save button {
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    color: white;
+    background-color: #e21a70;
+}
+.rider{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 22px;
+}
+.tip p{
+    font-size: 13px;
+    margin: 0;
+}
+.tip{
+    border: solid rgb(200, 197, 197);
+    border-width: 1px;
+    border-radius: 60px;
+    padding: 5px 14px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    border-color: #e21a70;
+    border-width: 2px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.save-it input{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+}
+.save-it label{
+    margin-top: 21px;
+    font-size: 15px;
+}
+
+.order button {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    background-color: #e21a70;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+.terms{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.ridertip{
+    background-color: #e21a70;
+    border-color: #e21a70;
+    color: white;
+}

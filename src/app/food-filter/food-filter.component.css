@@ -1,0 +1,148 @@
+
+input[type='radio']:checked {
+    background-color: #e21a70;
+    border-color: #e21a70;
+    cursor: pointer;
+}
+input[type='checkbox']:checked {
+    background-color: #e21a70;
+    border-color: #e21a70;
+}
+
+input[type='radio'] {
+    border-color: #e21a70;
+    cursor: pointer;
+}
+input[type='checkbox'] {
+    border-color: #e21a70;
+    border-width: 2px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.T-rest {
+    border: solid #bbb7b7;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 20px;
+    padding: 4px 12px;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.rating{
+    border: solid #bbb7b7;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 20px;
+    padding: 4px 12px;
+    width: 100px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.quick-filter p {
+    margin: 0;
+    margin-top: 12px;
+}
+.offers p {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.Cuisines p {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.filter-search{
+    display: flex;
+}
+.filter-search input{
+    border: none;
+    background-color:  rgb(247, 243, 243);
+    border-radius: 0px 20px 20px 0px ;
+    padding: 1px 10px;
+    width: 145px;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+.filter-search input::placeholder{
+    color: gray;
+}
+.filter-search svg{
+    background-color:  rgb(247, 243, 243);
+    padding: 10px;
+    border-radius: 20px 0px 0px 20px;
+    margin-bottom: 10px;
+
+}
+.form-check label{
+    font-size: 15px;
+}
+.price-cal{
+    display: flex;
+    justify-content: space-between;
+}
+.price-cal div {
+    border-radius: 20px;
+    text-align: center;
+    height: 29px;
+    width: 65px;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -5px;
+    line-height: 24px;
+    cursor: pointer;
+}
+.price-pink{
+    background-color: #e21a70;
+    border: solid #e21a70;
+    color: white;
+}
+.white-svg{
+    color: white;
+}
+.pink-svg{
+    color: #e21a70;
+}
+.price-nopink{
+    background-color: white;
+    border: solid rgb(228 226 226);
+    color: #616161;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top p {
+    color: #e21a70;
+    cursor: pointer;
+}
+
+.sort p {
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+.filter {
+    width: 20%;
+}
+
+.content {
+    overflow-y: scroll;
+    height: 770px;
+    border: solid #d6d3d3;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 15px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+}
+

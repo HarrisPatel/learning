@@ -1,0 +1,167 @@
+<div class="restaurant-top-info">
+    <div class="container">
+        <div class="flat"></div>
+        <div *ngFor="let r of singleRestaurant, index as number">
+            <div class="row col-12">
+                <div class="restaurant col-8">
+                    <div class="food">
+                        <div *ngFor="let f of r.foodtype" style="margin-right: 10px;">
+                            <span>{{f}}</span>
+                        </div>
+                    </div>
+                    <div class="heading">
+                        <h2><b>{{r.name}}</b></h2>
+                    </div>
+                    <div class="details">
+                        <div class="Top-Rest" *ngIf="r.topRest !== false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-star-fill" viewBox="0 0 16 16" style="color: #e21a70;">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                            <span>Top Restaurant</span>
+                        </div>
+                        <div class="Discount" *ngIf="r.discount !== null">
+                            <span>{{r.discount}}% off</span>
+                        </div>
+                        <div class="freeDelivery" *ngIf="r.deliveryCharges == 0 ">
+                            <span> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                    class="bi bi-bicycle" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z" />
+                                </svg><span> Free Delivery </span></span>
+                        </div>
+                        <div class="freeDelivery" *ngIf="r.deliveryCharges !== 0 ">
+                            <span> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                    class="bi bi-bicycle" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z" />
+                                </svg><span> Rs.{{r.deliveryCharges}} Delivery </span></span>
+                        </div>
+                        <div class="Minimum" *ngIf="r.miniorder !== null ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                class="bi bi-bag-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                <path
+                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                            </svg><span> Rs.249 Minimum</span>
+                        </div>
+                        <div class="Service" *ngIf="r.servicefee !== '' ">
+                            <span>Rs.7.99 Service Fee</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="favourites col-4">
+                    <button class="fav-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            fill="currentColor" class="bi bi-heart" style="color: #e21a70;" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>Add to Favourites</button>
+                </div>
+            </div>
+            <div class="deals border-top mt-4" *ngIf="r.discount ">
+                <h3 class="mt-4">Available deals</h3>
+                <div class="offer">
+                    <p class="offer-head"><svg aria-hidden="true" focusable="false" class="fl-interaction-primary"
+                            width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            data-testid="deal-icon" style="z-index: 2;">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.2419 2.94497C13.0128 1.68501 10.9872 1.68501 9.75808 2.94497L9.67801 3.02705C9.08858 3.63129 8.28021 3.97202 7.43609 3.97202H7.10396C5.37423 3.97202 3.97202 5.37424 3.97202 7.10396V7.43609C3.97202 8.28021 3.63129 9.08858 3.02705 9.67801L2.94497 9.75808C1.68501 10.9872 1.68501 13.0128 2.94497 14.2419L3.02705 14.322C3.63129 14.9114 3.97202 15.7198 3.97202 16.5639V16.896C3.97202 18.6258 5.37424 20.028 7.10396 20.028H7.43609C8.28021 20.028 9.08858 20.3687 9.67801 20.973L9.75808 21.055C10.9872 22.315 13.0128 22.315 14.2419 21.055L14.322 20.973C14.9114 20.3687 15.7198 20.028 16.5639 20.028H16.896C18.6258 20.028 20.028 18.6258 20.028 16.896V16.5639C20.028 15.7198 20.3687 14.9114 20.973 14.322L21.055 14.2419C22.315 13.0128 22.315 10.9872 21.055 9.75808L20.973 9.67801C20.3687 9.08858 20.028 8.28021 20.028 7.43609V7.10396C20.028 5.37423 18.6258 3.97202 16.896 3.97202H16.5639C15.7198 3.97202 14.9114 3.63129 14.322 3.02705L14.2419 2.94497ZM9.08333 10.75C10.0038 10.75 10.75 10.0038 10.75 9.08333C10.75 8.16286 10.0038 7.41667 9.08333 7.41667C8.16286 7.41667 7.41667 8.16286 7.41667 9.08333C7.41667 10.0038 8.16286 10.75 9.08333 10.75ZM15.5356 8.46491C15.2102 8.13947 14.6826 8.13947 14.3571 8.46491L8.46456 14.3575C8.13912 14.6829 8.13912 15.2105 8.46456 15.536C8.79 15.8614 9.31763 15.8614 9.64307 15.536L15.5356 9.64342C15.8611 9.31798 15.8611 8.79034 15.5356 8.46491ZM16.5833 14.9167C16.5833 15.8371 15.8371 16.5833 14.9167 16.5833C13.9962 16.5833 13.25 15.8371 13.25 14.9167C13.25 13.9962 13.9962 13.25 14.9167 13.25C15.8371 13.25 16.5833 13.9962 16.5833 14.9167Z">
+                            </path>
+                        </svg><span><b>{{r.discount}}% off</b></span></p>
+                    <p>Min order Rs. 199.Valid for selected items.Auto applied.</p>
+                </div>
+            </div>
+        
+            <div class="menu" [ngClass]="fixed == true ? 'fix' : '' ">
+                <div class="row s-contain">
+                    <div class="col-md-2">
+                        <div class="search">
+                            <input type="text" placeholder="Search in menu">
+                        </div>
+
+                    </div>
+                    <div class="col-md-10">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <div class="left-btn arrow" (click)="scrollLeft()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-left-short" viewBox="0 0 16 16" style="color: #e21a70;">
+                                        <path fill-rule="evenodd"
+                                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div #topnav class="slide d-flex">
+                                <ng-container  *ngFor="let o of r.menu">
+                                    <div class="food-1 dash" [ngClass]="menuNav == o.name? 'dash-active': ''"
+                                        (click)="selected_category(o.name, 'target'+o.id)"
+                                        style="text-decoration: none;">
+                                        <p>{{o.name}}</p>  
+                                </div>
+
+                                </ng-container>
+
+                            </div>
+
+
+                            <div>
+                                <div class="right-btn arrow" (click)="scrollRight()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16" style="color: #e21a70;">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="row col-12">
+                <div class="fooditems col-md-9 col-lg-9">
+                    <div *ngFor="let o of r.menu">
+                        <div id="target{{o.id}}">
+                            <h3 class="mt-4"><b>{{o.name}}</b></h3>
+                            <div class="row">
+                                <div class="Seperate-sections col-md-6 col-lg-6 mt-4" *ngFor="let item of o.items">
+                                    <div class="col">
+                                        <div class="card w-100">
+                                            <div class="card-body d-flex">
+                                                <div class="card-details">
+                                                    <h5 class="card-title">{{item.name}}</h5>
+                                                    <p class="card-text">{{item.des.slice(0,60)}}</p>
+                                                    <p class="card-price">Rs. {{item.price}}</p>
+                                                </div>
+                                                <div class="pic">
+                                                    <img [src]="item.image" alt="">
+                                                    <div class="cart-btn" (click)="addcart(item ,r.id)" (click)="child.callMethod()" ><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="18" height="18" fill="currentColor"
+                                                            class="bi bi-plus-lg" viewBox="0 0 16 16 ">
+                                                            <path fill-rule="evenodd"
+                                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                        <app-cart #child></app-cart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

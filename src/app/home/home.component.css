@@ -1,0 +1,304 @@
+.search-bar input {
+    border-style: none;
+    background-color: rgb(247, 243, 243);
+    padding: 18px;
+    width: 100%;
+    border-radius: 0px 60px 60px 0px;
+    margin-top: 15px;
+}
+
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    font-weight: bold;
+    color: rgb(147, 147, 147);
+}
+
+.search-icon {
+    color: rgb(147, 147, 147);
+    background-color: rgb(247, 243, 243);
+    border-radius: 60px 0px 0px 60px;
+    margin-top: 15px;
+}
+
+.search-icon svg {
+    margin-top: 19px;
+    margin-left: 20px;
+}
+
+.daily {
+    margin-top: 25px
+}
+
+.daily h2 {
+    color: rgb(41, 39, 39);
+}
+
+#dealimages {
+    margin-top: 10px;
+    width: 290px;
+    border-radius: 15px;
+}
+
+.s-image {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.s-content {
+    float: left;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: -30px;
+}
+
+
+.s-content::-webkit-scrollbar {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.s-left {
+    position: relative;
+    top: 67px;
+    left: -23px;
+    background-color: #e21a70;
+    border-radius: 60%;
+    float: left;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.s-right {
+    position: relative;
+    top: -108px;
+    left: 22px;
+    float: right;
+    background-color: #e21a70;
+    border-radius: 60%;
+    cursor: pointer;
+    padding: 8px;
+}
+
+#dealimages1 {
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.cuisines h2 {
+    margin-top: 193px;
+    margin-bottom: -14px;
+}
+
+.s-left1 {
+    position: relative;
+    top: 67px;
+    left: -23px;
+    background-color: #e21a70;
+    border-radius: 60%;
+    float: left;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.s-right1 {
+    position: relative;
+    top: -113px;
+    left: 22px;
+    float: right;
+    background-color: #e21a70;
+    border-radius: 60%;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.s-image p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.restaurants h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: -11px;
+}
+
+.col {
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: gray;
+    font-size: 13px;
+}
+
+.bottom-text {
+    color: gray;
+    font-size: 13px;
+}
+
+.bottom-text svg {
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.free {
+    margin-left: 3px;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.card img {
+    border-radius: 20px 20px 0px 0px;
+}
+
+
+.filter {
+    width: 20%;
+}
+
+
+
+.des-show {
+    display: block;
+}
+
+.des-none {
+    display: none;
+}
+
+.container-lg {
+    max-width: 1470px;
+}
+.flat{
+    padding: 75px;
+}
+
+/* --------------------------------Tablet---------------------------------- */
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+    .t-show {
+        display: block;
+    }
+
+    .t-none {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 930px) and (max-width: 1024px) and (orientation:landscape) {
+    .tl-show {
+        display: block;
+    }
+
+    .tl-none {
+        display: none;
+    }
+}
+
+/* --------------------------------Mobile---------------------------------- */
+
+@media only screen and (max-width: 720px) {
+    .m-show {
+        display: block;
+    }
+
+    .m-none {
+        display: none;
+    }
+
+    .s-left {
+        position: relative;
+        top: 67px;
+        left: -11px;
+        background-color: #e21a70;
+        border-radius: 60%;
+        float: left;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .s-right {
+        position: relative;
+        top: -108px;
+        left: 11px;
+        float: right;
+        background-color: #e21a70;
+        border-radius: 60%;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    .s-left1 {
+        position: relative;
+        top: 67px;
+        left: -10px;
+        background-color: #e21a70;
+        border-radius: 60%;
+        float: left;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .s-right1 {
+        position: relative;
+        top: -113px;
+        left: 10px;
+        float: right;
+        background-color: #e21a70;
+        border-radius: 60%;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    .restaurants .row {
+        margin-left: 0px;
+    }
+
+    .s-right {
+        display: none;
+    }
+
+    .s-left {
+        display: none;
+    }
+
+    .s-right1 {
+        display: none;
+    }
+
+    .s-left1 {
+        display: none;
+    }
+
+    .s-content {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 930px) and (orientation:landscape) {
+    .ml-show {
+        display: block;
+    }
+
+    .ml-none {
+        display: none;
+    }
+}

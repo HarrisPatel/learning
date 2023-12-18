@@ -1,0 +1,76 @@
+<div class="content">
+    <div class="top">
+        <h5><b>Filters</b></h5>
+        <p (click)="clearall()">Clear all</p>
+    </div>
+    <div class="sort">
+        <p>Sort by</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="relevance" (change)="sortby($event)" checked [(ngModel)]="sortbycheck">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Relevance
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="fastestdelivery" (change)="sortby($event)" [(ngModel)]="sortbycheck">
+            <label class="form-check-label" for="flexRadioDefault2">
+                Fastest delivery
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="distance" (change)="sortby($event)" [(ngModel)]="sortbycheck">
+            <label class="form-check-label" for="flexRadioDefault3">
+                Distance
+            </label>
+        </div>
+    </div>
+    <div class="quick-filter">
+        <p>Quick filter</p>
+        <div class="rating" (click)="rating4($event)" [ngClass]="rating == true ? 'price-pink' : ''">
+            <span>Ratings 4+</span>
+        </div>
+        
+        <div class="T-rest" (click)="topRest($event)" [ngClass]="toprest == true ? 'price-pink' : ''">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" [ngClass]="toprest == true ? 'white-svg' : 'pink-svg'" 
+                class="bi bi-star-fill" viewBox="0 0 16 16" >
+                <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
+            <span>Top Restaurant</span>
+        </div>
+    </div>
+    <div class="offers">
+        <p>Offers</p>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="freeDelivery" (change)="freeDelivery($event)"  [(ngModel)]="deliverycheck">
+            <label class="form-check-label" for="inlineCheckbox1"  >Free delivery</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="vouchers" (change)="acpVouchers($event)"  [(ngModel)]="voucherscheck">
+            <label class="form-check-label" for="inlineCheckbox2 "  >Accepts vouchers</label>
+        </div>
+    </div>
+    <div class="Cuisines">
+        <p>Cuisines</p>
+        <div class="filter-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+                class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg><input type="text" placeholder="Search for Cuisines">
+        </div>
+
+        <div class="form-check form-check" *ngFor="let c of cuisines, let i = index" >
+            <input class="form-check-input" type="checkbox" [id]="'inlineCheckbox'+i" [value]="c.name" (click)="cuisinesfilter($event)" [(ngModel)]="c.checked">
+            <label class="form-check-label" [for]="'inlineCheckbox'+i">{{c.name}}</label>
+        </div>
+    </div>
+    <div class="price mt-3">
+        <p>Price</p>
+        <div class="price-cal">
+            <div (click)="priceCheap()" [ngClass]="cheap == true ? 'price-pink' : 'price-nopink'" ><span>$</span></div>
+            <div (click)="priceMedium()" [ngClass]=" medium == true ? 'price-pink' : 'price-nopink'"><span>$$</span></div>
+            <div (click)="priceExpensive()" [ngClass]="expensive == true ? 'price-pink' : 'price-nopink'"><span>$$$</span></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,317 @@
+.food {
+    display: flex;
+    color: gray;
+    margin-top: 10px;
+}
+
+.details {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    color: #333333;
+}
+
+.Top-Rest {
+    border: solid #bbb7b7;
+    border-width: 1px;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 20px;
+    padding: 3px 12px;
+}
+
+.Top-Rest svg {
+    margin-bottom: 2px;
+    margin-right: 3px;
+}
+
+.fav-btn {
+    cursor: pointer;
+    border: solid;
+    border-color: #e21a70;
+    border-width: 1px;
+    background-color: white;
+    border-radius: 7px;
+    color: #e21a70;
+    padding: 9px 19px;
+    float: right;
+    margin-top: 110px;
+}
+
+.fav-btn svg {
+    margin-right: 5px;
+}
+
+.details {
+    font-size: 14px;
+    color: black;
+    margin-top: 20px;
+}
+
+.food {
+    line-height: 50px;
+}
+
+.heading {
+    line-height: 50px;
+}
+
+
+.Discount {
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(242, 212, 217);
+    color: #c21760;
+    padding: 2px 8px;
+}
+
+.deals h3 {
+    color: #333333;
+}
+
+.offer {
+    margin-top: 16px;
+    border: none;
+    background: #f2dee1;
+    width: 280px;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    visibility: 0.7;
+    cursor: pointer;
+}
+
+.offer p {
+    margin: 0;
+    width: 200px;
+    margin-bottom: 10px;
+    columns: gray;
+}
+
+.offer .offer-head {
+    margin-bottom: 7px;
+    font-size: 14px;
+
+}
+
+.offer-head svg {
+    margin-right: 5px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.nav .dash {
+    width: 20px;
+    padding: 2px 75px;
+    border-radius: 54px;
+}
+
+.sep-food {
+    text-align: center;
+    cursor: pointer;
+}
+
+.search input {
+    border: none;
+    background-color: #fff4f6;
+    padding: 4px 25px;
+    border-radius: 60px;
+    padding: 0px -4px;
+    cursor: pointer;
+}
+
+.search input:focus {
+    outline-color: rgb(188, 185, 185);
+}
+
+.head-des {
+    color: gray;
+    letter-spacing: 0.5px;
+}
+
+.card-body h5 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.card-body .card-text {
+    color: gray;
+    font-size: 15px;
+}
+
+.card-details {
+    width: 265px;
+}
+
+.pic img {
+    margin-left: 45px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.pink {
+    color: #e21a70;
+    margin-bottom: 0;
+    padding: 7px;
+}
+
+.black {
+    color: #333333;
+    margin-bottom: 0;
+    padding: 7px;
+}
+
+.pink-div {
+    background-color: #e21a70;
+}
+
+.black-div {
+    visibility: none;
+}
+
+.sep-food:hover {
+    background-color: #fbeaed;
+}
+
+
+.menu {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.search {
+    margin-right: 20px;
+}
+
+.pic {
+    width: 125px;
+    margin-left: 50px;
+    height: 115px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.card-price {
+    color: black;
+    font-size: 18px;
+    margin: 0;
+}
+
+.card:hover {
+    background-color: #fdf1f3;
+}
+
+.arrow {
+    width: 35px;
+    border-radius: 60px;
+    border: solid rgb(164, 159, 159);
+    cursor: pointer;
+    border-width: 1px;
+}
+
+.s-content {
+    float: left;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 35px;
+}
+
+.flat {
+    padding: 75px;
+}
+
+.col-md-2 {
+    width: 19.666667%;
+}
+
+.col-md-10 {
+    width: 77%;
+}
+.dash{
+    color: black;
+    cursor: pointer;
+    padding: 3px 12px;
+    text-align: center;
+}
+.dash p {
+    width: 135px;
+    margin: 0;
+}
+
+.dash-active{
+    color: #e21a70;
+    border-bottom: 5px solid #e21a70;
+}
+
+.slide {
+    overflow-x: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slide::-webkit-scrollbar {
+    display: none;
+}
+
+.cart-btn {
+    background-color: white;
+    position: absolute;
+    padding: 4px 7px;
+    top: 76px;
+    left: 80px;
+    border-radius: 61px;
+    cursor: pointer;
+}
+
+.cart-btn svg {
+    color: #e21a70;
+}
+
+.cart-btn:hover {
+    background-color: #e21a70;
+}
+
+.cart-btn:hover svg {
+    color: white;
+}
+
+.pic {
+    position: relative;
+}
+
+.cart[_ngcontent-ng-c3017338061] {
+    background-color: #fed9ff;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 16px;
+    margin-top: 34px;
+    background-color: white;
+}
+
+.fix {
+    position: fixed;
+    top: 89px;
+    scroll-margin-top: 10px;
+    z-index: 1;
+    background-color: white;
+    width: 68%;
+    padding-top: 10px;
+}

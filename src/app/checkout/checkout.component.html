@@ -1,0 +1,145 @@
+<div class="container">
+    <div class="row col-12">
+        <div class="details col-md-7">
+            <div class="address">
+                <div class="border-bottom">
+                    <div class="address-top d-flex justify-content-between">
+                        <h4><b>Delivery address</b></h4>
+                        <p style="color: #e21a70; font-size: 15px; cursor: pointer;"><b>Change</b></p>
+                    </div>
+                    <div class="address-bottom d-flex">
+                        <div class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </div>
+                        <div class="letter-location">
+                            <p><b>{{address}}</b></p>
+                            <p>Karachi</p>
+                            <p>Note to rider: none</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-less d-flex">
+                    <span style="color: rgb(90, 89, 89); font-size: 16px;">Contactless delivery</span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                </div>
+            </div>
+            <div class="personal">
+                <form [formGroup]="details">
+                    <div class="address-top d-flex justify-content-between">
+                        <h4><b>Personal details</b></h4>
+                        <p style="color: #e21a70; font-size: 15px; cursor: pointer;"><b>Change</b></p>
+                    </div>
+                    <div style="margin: 0 10px;">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput1" placeholder="name@example.com" formControlName="email">
+                            <label for="floatingInput1">Email address</label>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="form-floating" style="width: 95%;">
+                                <input type="text" class="form-control" id="floatingInput2"
+                                    placeholder="name@example.com">
+                                <label for="floatingInpu2t">First name</label>
+                            </div>
+                            <div style="width: 30px;"></div>
+                            <div class="form-floating" style="width: 95%;">
+                                <input type="text" class="form-control" id="floatingInput3"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput3">Last name</label>
+                            </div>
+                        </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="floatingInput4"
+                                placeholder="name@example.com">
+                            <label for="floatingInput4">Mobile number</label>
+                        </div>
+                        <div class="save">
+                            <button><b>Save</b></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="rider">
+                <div class="your-order-top">
+                    <h4><b>Tip your rider</b></h4>
+                    <p style="color: rgb(94, 94, 94); font-size: 14px;">Your rider receives 100% of the tip</p>
+                </div>
+                <div class="d-flex">
+                    <div class="tip" [ngClass]="rider == 0? 'ridertip':''" (click)="selectTip(0)">
+                        <p>Not now</p>
+                    </div>
+                    <div class="tip" [ngClass]="rider == 25? 'ridertip':''" (click)="selectTip(25)">
+                        <p>Rs. 25.00</p>
+                    </div>
+                    <div class="tip" [ngClass]="rider == 50? 'ridertip':''" (click)="selectTip(50)">
+                        <p>Rs. 50.00</p>
+                    </div>
+                    <div class="tip" [ngClass]="rider == 100? 'ridertip':''" (click)="selectTip(100)">
+                        <p>Rs. 100.00</p>
+                    </div>
+                    <div class="tip" [ngClass]="rider == 200? 'ridertip':''" (click)="selectTip(200)">
+                        <p>Rs. 200.00</p>
+                    </div>
+                </div>
+                <div class="form-check form-check save-it">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="next save">
+                    <label class="form-check-label" for="inlineCheckbox2 ">Save it for the next order</label>
+                </div>
+            </div>
+            <div class="order">
+                <button><b>Place order</b></button>
+            </div>
+            <div class="terms">
+                <p>By making this purchase you agree to our <span style="color: #e21a70; cursor: pointer;">terms and
+                        conditions</span> .</p>
+                <p>I agree that placing the order places me under an obligation to make a payment in accordance with the
+                    General Terms and Conditions.</p>
+            </div>
+
+
+        </div>
+        <div class="list col-md-5">
+            <div class="your-order">
+                <div class="your-order-top">
+                    <h4><b>Your order from</b></h4>
+                    <p style="color: rgb(94, 94, 94); font-size: 14px;">{{fullArray.name}}</p>
+                </div>
+                <div class="your-order-bottom border-bottom mb-4">
+                    <div class="d-flex justify-content-between" *ngFor="let items of orignalcart">
+                        <span>{{items.quantity}} x {{items.name}}</span>
+                        <span>Rs.{{items.price}}</span>
+                    </div>
+
+                </div>
+                <div class="your-order-bottom d-flex justify-content-between">
+                    <span>Subtotal</span>
+                    <span>Rs.{{subtotal}}</span>
+                </div>
+                <div class="your-order-bottom d-flex justify-content-between">
+                    <span>Delivery Fee</span>
+                    <span *ngIf="fullArray.deliveryCharges !== 0">Rs.{{fullArray.deliveryCharges}}</span>
+                    <span *ngIf="fullArray.deliveryCharges == 0">Free</span>
+                </div>
+                <div class="your-order-bottom d-flex justify-content-between">
+                    <span>Service Fee</span>
+                    <span>Rs.{{fullArray.servicefee}}</span>
+                </div>
+                <div class="your-order-bottom d-flex justify-content-between"
+                    style="color: black; font-size: 25px; margin-top: 10px;">
+                    <span><b>Total</b></span>
+                    <span><b>Rs. {{total}}</b></span>
+                </div>
+                <div class="your-order-bottom">
+                    <span>(Incl. VAT)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
